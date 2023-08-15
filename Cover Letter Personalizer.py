@@ -6,7 +6,7 @@ import openai
 openai.api_key = 'insert OpenAI API key here'
 
 def generate_personalized_line(company_name, position_title):
-    prompt = f"Please write 1 simplified sentence to insert into my cover letter about why I'm interested in working for the company {company_name} as a {position_title}, based on the company's specific products, values, and mission. It should be specific to the company, personal and make me stand out as a candidate."
+    prompt = f"Please write 1 - 2 simplified sentences to insert into my cover letter about why I'm interested in working for the company {company_name} as a {position_title}, based on the company's specific products, values, and mission. It should be written as if authored by an excited, young, inexperienced candidate. It should be unique, specific to the company, personal and make me stand out as a candidate. It should explain my enthusiasm and interest for the company based on their core products, missions and solutions simplified to a non-technical level."
     response = openai.ChatCompletion.create(
         model="gpt-3.5-turbo",
         messages=[
